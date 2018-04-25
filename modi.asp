@@ -52,7 +52,6 @@
         xmlDoc = loadXMLDoc("studentschema.xml");  
         var student = xmlDoc.getElementsByTagName("student");  
         var myselect = document.getElementById("myselect");  
-
         for(var i = 0;i<student.length;i++)
 		{  
             var opt = document.createElement("option");  
@@ -113,9 +112,8 @@
                         for(var j = 0;j<student.length;j++)
 						{  
                             if(opt[i].text == student[j].getAttribute("id"))
-							{	
-							/*
-								var cityIntro =  document.getElementById("cityIntro");  
+							{  
+                                var cityIntro =  document.getElementById("cityIntro");  
                                 if(document.getElementsByTagName("p").length>0)
 								{  
                                     var reP = document.getElementsByTagName("p");  
@@ -128,8 +126,8 @@
                                 var p = document.createElement("p");  
                                           
                                 p.appendChild(text);  
-                                cityIntro.appendChild(p); 
-							*/	
+                                cityIntro.appendChild(p); 								
+									
 								document.getElementById("name").value = student[j].childNodes[1].firstChild.nodeValue;								
 									
                                 break;  
@@ -153,12 +151,13 @@
 			if(knum==delestu[i].childNodes[0].childNodes[0].nodeValue)
 			{
 				deled_node=x.removeChild(delestu[i]);
-				alert(deled_node.childNodes[1].childNodes[0].nodeValue+"删除了节点saved");
-				//传入vbs后台通信
+				alert(deled_node.childNodes[1].childNodes[0].nodeValue+"删除了节点");
+				//save断开,vbs后台通信
 				var url="suredelete.asp?datatag="+document.getElementById("num").value;
-				////alert(url);
+				alert(url);
 				window.location.href=url;
-				//alert("saved");
+				//xmlDoc.save("studentschema.xml");本地化不可用
+				alert("saved");
 				break;
 			}
 		}
@@ -196,6 +195,8 @@
 				editstu[i].childNodes[6].firstChild.nodeValue=document.getElementById("class").value;
 				
 				
+				
+				
 				alert("同学:"+editstu[i].childNodes[1].firstChild.nodeValue+"更新了信息");
 				
 				var key="num="+editstu[i].childNodes[0].firstChild.nodeValue+"&";
@@ -211,6 +212,7 @@
 				window.location.href=url;
 				//document.write(url);		
 				
+				//xmlDoc.save("studentschema.xml");本地化不可用
 				//alert("saved ok");
 				break;
 			}
@@ -222,9 +224,11 @@
 </script> 
 
 
+
+ 
 </head>  
 <body onLoad="loadXMLFile()"> 
-	<div align="center"><font size="+3" color="#0072C6"><strong>修改学生基本信息</strong></font></div>
+	<div align="center"><font size="+3"><strong>修改学生基本信息</strong></font></div>
 	<div align="center"><a href="index.html">返回</a></div>
 	<hr color="#f46240" SIZE="1">
 	<div align="center"><strong>请输入学号或姓名:</strong></div>
@@ -270,6 +274,8 @@
 	    Response.write("<a href="+url+" target='_self'>删除</a>")
 		end if
 	%>
+	
+	
 	
 </body>
 </html>
