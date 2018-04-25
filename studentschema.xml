@@ -37,15 +37,6 @@
 		<major>土木</major>
 		<class>201301</class>
 	</student>
-	<student id="4242">
-		<id>4242</id>
-		<name>是吧</name>
-		<sex>男</sex>
-		<orig>2424</orig>
-		<acade>阿斯蒂芬</acade>
-		<major>阿斯蒂芬</major>
-		<class>2100320</class>
-	</student>
 	<student id="15611">
 		<id>15611</id>
 		<name>娃哈哈</name>
@@ -55,13 +46,4 @@
 		<major>对方</major>
 		<class>3101002</class>
 	</student>
-	<student id="4545">
-		<id>4545</id>
-		<name>圣母</name>
-		<sex>男</sex>
-		<orig>地狱</orig>
-		<acade>没出息</acade>
-		<major>再见</major>
-		<class>45454</class>
-	</student>
-	<student id="1325121"><id>1325121</id><name>妈妈</name><sex>男</sex><orig>山东</orig><acade>管理</acade><major>金融</major><class>135210310</class></student><student id="123151102"><id>123151102</id><name>王豆豆</name><sex>女</sex><orig>山东</orig><acade>矮的</acade><major>打发打发</major><class>136541684</class></student><student id="1165165"><id>1165165</id><name>小二</name><sex>男</sex><orig>送达</orig><acade>沙发</acade><major>撒旦法</major><class>16548</class></student></studentlist>
+	<student id="1325121"><id>1325121</id><name>妈妈</name><sex>男</sex><orig>山东</orig><acade>管理</acade><major>金融</major><class>135210310</class></student><student id="123151102"><id>123151102</id><name>王豆豆</name><sex>女</sex><orig>山东</orig><acade>矮的</acade><major>打发打发</major><class>136541684</class></student><student id="1165165"><id>1165165</id><name>小二</name><sex>男</sex><orig>送达</orig><acade>沙发</acade><major>撒旦法</major><class>16548</class></student><student id="201516515"><id>201516515</id><name>阿德法</name><sex>男</sex><orig>德国</orig><acade>机械学院</acade><major>打工啊</major><class>136541684</class></student><student id="135165468"><id>135165468</id><name>阿萨德</name><sex>男</sex><orig>阿斯</orig><acade>窘迫</acade><major>绿色</major><class>16544163</class></student></studentlist>

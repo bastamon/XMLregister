@@ -61,7 +61,7 @@ set arrClass =objXML.getElementsByTagName("class")
 '	Response.Write"</tr>"
 	
 '	Next
-	Response.Write "</table>"
+'	Response.Write "</table>"
 	Set objXML = nothing
 End Function
 
@@ -147,8 +147,8 @@ Function addEntry()
 	objClass.text = strClass
 	
 	objXML.save(server.MapPath("studentschema.xml"))
-	response.Write "<script>alert('已成功保存学生信息D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml')</script>"
 	Response.Redirect("add.asp")
+	Response.Write "<script>document.write('已成功保存学生信息D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml')</script>"
 	end if
 End function
 
@@ -156,7 +156,7 @@ End function
 
 '填写和发送留言表单的函数entryForm()
 Function entryForm()
-	Response.Write "<p align='center'><b>请输入学生信息</b></p>"
+	Response.Write "<p align='center'><font size=+3 color=0072C6>请添加学生信息</font></p>"
 	Response.Write "<hr color=#f46240 SIZE=1>"
 	Response.Write "<form action=add.asp?action=addEntry method=post>"
 	Response.Write "<table border=0 align=center>"
@@ -185,7 +185,7 @@ init
 End If
 %>
 <script language="JavaScript">   
-	//alert("已成功保存学生信息D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml");
+	alert("已成功保存学生信息D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml");
 </script>
 </body>
 </html>
