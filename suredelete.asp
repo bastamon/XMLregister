@@ -3,6 +3,7 @@
 <%
   '首先中request对象中获得用于确定留言的日期值
    str=Request.QueryString("datatag")
+   'stop
    '创建用于访问XML文档的DOM对象
    set xmldoc=Server.createObject("Microsoft.XMLDOM")
    '使用load方法将XML文档装入DOM对象
