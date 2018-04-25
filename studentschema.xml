@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="studentschema.xsl" type="text/xsl"?>
+<studentlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="studentschema.xsd">
+	<student id="20131231002">
+		<id>20131232006</id>
+		<name>张琴</name>
+		<sex>女</sex>
+		<orig>湖北</orig>
+		<acade>外语学院</acade>
+		<major>英语</major>
+		<class>201303</class>
+	</student>
+	<student id="20131239006">
+		<id>20131239006</id>
+		<name>李飞</name>
+		<sex>男</sex>
+		<orig>湖南</orig>
+		<acade>管理学院</acade>
+		<major>金融</major>
+		<class>201303</class>
+	</student>
+	<student id="20131226001">
+		<id>20131226001</id>
+		<name>黄娟</name>
+		<sex>女</sex>
+		<orig>福建</orig>
+		<acade>外语学院</acade>
+		<major>汉语</major>
+		<class>201301</class>
+	</student>
+	<student id="20131226002">
+		<id>20131226002</id>
+		<name>安置</name>
+		<sex>男</sex>
+		<orig>安徽</orig>
+		<acade>环境建筑</acade>
+		<major>土木</major>
+		<class>201301</class>
+	</student>
+	<student id="4242">
+		<id>4242</id>
+		<name>是吧</name>
+		<sex>男</sex>
+		<orig>2424</orig>
+		<acade>阿斯蒂芬</acade>
+		<major>阿斯蒂芬</major>
+		<class>2100320</class>
+	</student>
+	<student id="15611">
+		<id>15611</id>
+		<name>娃哈哈</name>
+		<sex>男</sex>
+		<orig>阿斯蒂芬</orig>
+		<acade>阿发第三</acade>
+		<major>对方</major>
+		<class>3101002</class>
+	</student>
+	<student id="4545">
+		<id>4545</id>
+		<name>圣母</name>
+		<sex>男</sex>
+		<orig>地狱</orig>
+		<acade>没出息</acade>
+		<major>再见</major>
+		<class>45454</class>
+	</student>
+	<student id="1325121"><id>1325121</id><name>妈妈</name><sex>男</sex><orig>山东</orig><acade>管理</acade><major>金融</major><class>135210310</class></student><student id="123151102"><id>123151102</id><name>王豆豆</name><sex>女</sex><orig>山东</orig><acade>矮的</acade><major>打发打发</major><class>136541684</class></student><student id="1165165"><id>1165165</id><name>小二</name><sex>男</sex><orig>送达</orig><acade>沙发</acade><major>撒旦法</major><class>16548</class></student></studentlist>
