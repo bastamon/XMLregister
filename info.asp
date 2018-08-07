@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 <script type="text/javascript" src="js/loadXMLDoc.js"></script>

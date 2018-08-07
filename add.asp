@@ -1,20 +1,20 @@
 <!doctype html>
 <html>
 <head>
-<title>Ìí¼ÓÑ§Éú¸öÈËĞÅÏ¢</title>
+<title>æ·»åŠ å­¦ç”Ÿä¸ªäººä¿¡æ¯</title>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 
 <%@Language="VBScript"%>
 <%
-'ÉèÖÃWebÒ³ÃæµÄĞÅÏ¢
+'è®¾ç½®Webé¡µé¢çš„ä¿¡æ¯
 Response.Buffer = true
 Response.Expires = -1
 
 
-'ÏÔÊ¾ÁôÑÔº¯Êıinit()
+'æ˜¾ç¤ºç•™è¨€å‡½æ•°init()
 Function init()
 entryForm()
-'¶¨Òå¾Ö²¿±äÁ¿
+'å®šä¹‰å±€éƒ¨å˜é‡
 Dim objXML
 Dim arrNames
 Dim arrIds
@@ -24,12 +24,12 @@ Dim arrAcades
 Dim arrMajors
 Dim arrClass
 
-'´´½¨XMLDOMÎÄµµ¶ÔÏó£¬ÓÃÀ´´æ·ÅÁôÑÔ
+'åˆ›å»ºXMLDOMæ–‡æ¡£å¯¹è±¡ï¼Œç”¨æ¥å­˜æ”¾ç•™è¨€
 Set objXML = server.createObject("Msxml2.DOMDocument")
 objXML.async = false
 objXML.load(server.MapPath("studentschema.xml"))
 
-'È¡µÃÁôÑÔ±¾¸÷ÔªËØµÄ¼¯ºÏ
+'å–å¾—ç•™è¨€æœ¬å„å…ƒç´ çš„é›†åˆ
 Set arrNames = objXML.getElementsByTagName("name")
 Set arrIds = objXML.getElementsByTagName("id")
 Set arrSexs = objXML.getElementsByTagName("sex")
@@ -41,22 +41,22 @@ set arrClass =objXML.getElementsByTagName("class")
 
 'Response.Write "<table border='0' width='100%'>"
 'Response.Write "<tr><td bgcolor='#00CCFF' align='center' height='26'>"
-'Response.Write "<b>Ñ§ÉúĞÅÏ¢ÈçÏÂ£º</b>"
+'Response.Write "<b>å­¦ç”Ÿä¿¡æ¯å¦‚ä¸‹ï¼š</b>"
 'Response.Write "</td></tr>"
 
-'Êä³öÁôÑÔ±¾¸÷ÔªËØµÄÄÚÈİ£¬×îĞÂµÄÁôÑÔÏÈÏÔÊ¾
+'è¾“å‡ºç•™è¨€æœ¬å„å…ƒç´ çš„å†…å®¹ï¼Œæœ€æ–°çš„ç•™è¨€å…ˆæ˜¾ç¤º
 'For x=arrNames.length-1 To 0 Step -1
 '	Response.Write "<tr>"
-'	Response.Write"<td>ĞÕÃû:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" & arrNames.item(x).text & "</td>"
-'	Response.Write "<td>Ñ§ºÅ:" & arrIds.item(x).text & "<td>"
+'	Response.Write"<td>å§“å:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" & arrNames.item(x).text & "</td>"
+'	Response.Write "<td>å­¦å·:" & arrIds.item(x).text & "<td>"
 
-'	Response.Write"<td>ĞÔ±ğ:</td><td>" & arrSexs.item(x).text & "</td>"
-'	Response.Write "<td>¼®¹á:" & arrOrigs.item(x).text & "<td>"
+'	Response.Write"<td>æ€§åˆ«:</td><td>" & arrSexs.item(x).text & "</td>"
+'	Response.Write "<td>ç±è´¯:" & arrOrigs.item(x).text & "<td>"
 
-'	Response.Write"<td>Ñ§Ôº:</td><td>" & arrAcades.item(x).text & "</td>"
-'	Response.Write "<td>×¨Òµ:" & arrMajors.item(x).text & "<td>"
+'	Response.Write"<td>å­¦é™¢:</td><td>" & arrAcades.item(x).text & "</td>"
+'	Response.Write "<td>ä¸“ä¸š:" & arrMajors.item(x).text & "<td>"
 
-'	Response.Write "<td>°à¼¶:</td><td>" & arrClass.item(x).text & "</td>"
+'	Response.Write "<td>ç­çº§:</td><td>" & arrClass.item(x).text & "</td>"
 '	Response.Write "<td></td>"
 '	Response.Write"</tr>"
 	
@@ -65,9 +65,9 @@ set arrClass =objXML.getElementsByTagName("class")
 	Set objXML = nothing
 End Function
 
-'ÏòXMLÎÄ¼şÌí¼ÓÁôÑÔ¼ÇÂ¼µÄº¯ÊıaddEntry()
+'å‘XMLæ–‡ä»¶æ·»åŠ ç•™è¨€è®°å½•çš„å‡½æ•°addEntry()
 Function addEntry()
-	'¶¨Òå¾Ö²¿±äÁ¿
+	'å®šä¹‰å±€éƒ¨å˜é‡
 	Dim strName
 	Dim strId
 	Dim strSex
@@ -75,7 +75,7 @@ Function addEntry()
 	Dim strAcade
 	Dim strMajor
 	Dim strClass
-	'È¡µÃÁôÑÔ±íµ¥µÄÊäÈëÄÚÈİ
+	'å–å¾—ç•™è¨€è¡¨å•çš„è¾“å…¥å†…å®¹
 	
 	strName = Request.Form("iName")	
 	strId = Request.Form("iNum")
@@ -86,17 +86,17 @@ Function addEntry()
 	strClass=Request.Form("iClass")
 	 
 	if strName=""  then			 
-			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>ĞÕÃû²»ÄÜÎª¿Õ</a>2s·µ»Ø</font></p></body></html>"
+			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>å§“åä¸èƒ½ä¸ºç©º</a>2sè¿”å›</font></p></body></html>"
 		elseif strId ="" then
-			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>Ñ§ºÅ²»ÄÜÎª¿Õ</a>2s·µ»Ø</font></p></body></html>"
+			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>å­¦å·ä¸èƒ½ä¸ºç©º</a>2sè¿”å›</font></p></body></html>"
 		elseif strOrig="" then
-			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>¼®¹á²»ÄÜÎª¿Õ</a>2s·µ»Ø</font></p></body></html>"
+			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>ç±è´¯ä¸èƒ½ä¸ºç©º</a>2sè¿”å›</font></p></body></html>"
 		elseif strAcade="" then
-			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>Ñ§Ôº²»ÄÜÎª¿Õ</a>2s·µ»Ø</font></p></body></html>"
+			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>å­¦é™¢ä¸èƒ½ä¸ºç©º</a>2sè¿”å›</font></p></body></html>"
 		elseif strMajor="" then
-			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>×¨Òµ²»ÄÜÎª¿Õ</a>2s·µ»Ø</font></p></body></html>"	
+			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>ä¸“ä¸šä¸èƒ½ä¸ºç©º</a>2sè¿”å›</font></p></body></html>"	
 		elseif strClass="" then
-			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>°à¼¶²»ÄÜÎª¿Õ</a>2s·µ»Ø</font></p></body></html>"
+			Response.Write "<!doctype html><html><head><meta charset=utf-8 http-equiv=refresh content=2;url=add.asp><title>null</title></head><body><p align=center><font size=+3><a href=add.asp>ç­çº§ä¸èƒ½ä¸ºç©º</a>2sè¿”å›</font></p></body></html>"
 		else 
 	
 	Dim objXML
@@ -109,7 +109,7 @@ Function addEntry()
 	Dim objMajor
 	Dim objClass
 	
-	'ÏòXMLÎÄ¼şÌí¼ÓÁôÑÔÄÚÈİ
+	'å‘XMLæ–‡ä»¶æ·»åŠ ç•™è¨€å†…å®¹
 	Set objXML = server.createObject("Msxml2.DOMDocument")
 	objXML.async = false
 	objXML.load(server.MapPath("studentschema.xml"))
@@ -148,44 +148,44 @@ Function addEntry()
 	
 	objXML.save(server.MapPath("studentschema.xml"))
 	Response.Redirect("add.asp")
-	Response.Write "<script>document.write('ÒÑ³É¹¦±£´æÑ§ÉúĞÅÏ¢D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml')</script>"
+	Response.Write "<script>document.write('å·²æˆåŠŸä¿å­˜å­¦ç”Ÿä¿¡æ¯D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml')</script>"
 	end if
 End function
 
 
 
-'ÌîĞ´ºÍ·¢ËÍÁôÑÔ±íµ¥µÄº¯ÊıentryForm()
+'å¡«å†™å’Œå‘é€ç•™è¨€è¡¨å•çš„å‡½æ•°entryForm()
 Function entryForm()
-	Response.Write "<p align='center'><font size=+3 color=0072C6>ÇëÌí¼ÓÑ§ÉúĞÅÏ¢</font></p>"
+	Response.Write "<p align='center'><font size=+3 color=0072C6>è¯·æ·»åŠ å­¦ç”Ÿä¿¡æ¯</font></p>"
 	Response.Write "<hr color=#f46240 SIZE=1>"
 	Response.Write "<form action=add.asp?action=addEntry method=post>"
 	Response.Write "<table border=0 align=center>"
-	Response.Write "<tr><td>ĞÕÃû<input type=text name=iName /><td>Ñ§ºÅ<input type=text name=iNum /></td></tr>"
-	Response.Write "<tr><td>ĞÔ±ğ<select name='iSex'style=width:80px;><option selected>ÄĞ</option><option>Å®</option></select>"
-	Response.Write "</td><td>¼®¹á<input type=text name=iOrig /></td></tr>"
-	Response.Write "<tr><td>Ñ§Ôº<input type=text name=iAcade /></td><td>×¨Òµ<input type=text name=iMajor /></td></tr>"
-	Response.Write "<tr><td>°à¼¶<input type=text name=iClass /></td><td><input type=submit value=±£´æ /></td></tr>"
+	Response.Write "<tr><td>å§“å<input type=text name=iName /><td>å­¦å·<input type=text name=iNum /></td></tr>"
+	Response.Write "<tr><td>æ€§åˆ«<select name='iSex'style=width:80px;><option selected>ç”·</option><option>å¥³</option></select>"
+	Response.Write "</td><td>ç±è´¯<input type=text name=iOrig /></td></tr>"
+	Response.Write "<tr><td>å­¦é™¢<input type=text name=iAcade /></td><td>ä¸“ä¸š<input type=text name=iMajor /></td></tr>"
+	Response.Write "<tr><td>ç­çº§<input type=text name=iClass /></td><td><input type=submit value=ä¿å­˜ /></td></tr>"
 	Response.Write "</table>"
 	Response.Write "</form>"
-	Response.Write "<p align=center><a href=index.html>·µ»Ø</a><hr color=#f46240 SIZE=1>"
+	Response.Write "<p align=center><a href=index.html>è¿”å›</a><hr color=#f46240 SIZE=1>"
 End Function
 %>
 </head>
 
 <body>
 <%
-'ÅĞ¶ÏÊÇ·ñ·¢ËÍÁËÁôÑÔ£¬²¢¸üĞÂÁôÑÔĞÅÏ¢
+'åˆ¤æ–­æ˜¯å¦å‘é€äº†ç•™è¨€ï¼Œå¹¶æ›´æ–°ç•™è¨€ä¿¡æ¯
 Dim a
 a = Request.Querystring("action")
 If a<>"" Then
 addEntry
-Response.Write "<script language=""javascript"">alert('ÒÑ³É¹¦±£´æÑ§ÉúĞÅÏ¢D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml');window.close();</script>"
+Response.Write "<script language=""javascript"">alert('å·²æˆåŠŸä¿å­˜å­¦ç”Ÿä¿¡æ¯D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml');window.close();</script>"
 else
 init
 End If
 %>
 <script language="JavaScript">   
-	alert("ÒÑ³É¹¦±£´æÑ§ÉúĞÅÏ¢D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml");
+	alert("å·²æˆåŠŸä¿å­˜å­¦ç”Ÿä¿¡æ¯D:\\Administrator\\Documents\\workspace\\unknow1\\studentschema.xml");
 </script>
 </body>
 </html>

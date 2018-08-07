@@ -2,7 +2,7 @@
 <html>  
 <head>  
 <meta charset="gb2312"> 
-<title>ĞŞ¸ÄÑ§Éú»ù±¾ĞÅÏ¢</title>  
+<title>ä¿®æ”¹å­¦ç”ŸåŸºæœ¬ä¿¡æ¯</title>  
 <style type="text/css">  
     #cityIntro 
 	.{  
@@ -19,7 +19,7 @@
 
 <script language="javascript">
 
-	//¼ÓÔØxmlÎÄ¼ş  
+	//åŠ è½½xmlæ–‡ä»¶  
     function loadXMLDoc(dname)
     {  
         try //Internet Explorer  
@@ -46,7 +46,7 @@
 		return(null);  
     } 
 
-    //Ö÷º¯Êı  
+    //ä¸»å‡½æ•°  
     function loadXMLFile()
 	{  
         xmlDoc = loadXMLDoc("studentschema.xml");  
@@ -62,7 +62,7 @@
         }  
         //catchEvent(myselect,'change',checkSelected());  
     }  
-	//erro´¦Àí
+	//erroå¤„ç†
     function catchEvent(eventobj,event,eventHandler){    
 		if(eventobj.addEventListener){    
             eventobj.addEventListener(event,eventHandler,false);    
@@ -75,7 +75,7 @@
 	
 	
 	
-	//¸ù¾İvalue²éÕÒ
+	//æ ¹æ®valueæŸ¥æ‰¾
 	function inputval()
 	{
 		//xmlDoc=loadXMLDoc("studentschema.xml");
@@ -91,7 +91,7 @@
 				document.getElementById("acade").value = student1[i].childNodes[4].firstChild.nodeValue;
 				document.getElementById("major").value = student1[i].childNodes[5].firstChild.nodeValue;
 				document.getElementById("class").value = student1[i].childNodes[6].firstChild.nodeValue;
-				//xmlDoc.Close();alert("¶ÁĞ´¹Ø±Õ");²»Çå³ş
+				//xmlDoc.Close();alert("è¯»å†™å…³é—­");ä¸æ¸…æ¥š
 				
 				break;
 			}
@@ -100,7 +100,7 @@
 	
 	
 	
-        //onchangeÊÂ¼ş´¥·¢º¯Êı£¬Ñ¡ÔñÑ§ºÅºó»áÏÔÊ¾ Ñ§ÉúµÄÏà¹ØĞÅÏ¢  
+        //onchangeäº‹ä»¶è§¦å‘å‡½æ•°ï¼Œé€‰æ‹©å­¦å·åä¼šæ˜¾ç¤º å­¦ç”Ÿçš„ç›¸å…³ä¿¡æ¯  
         function checkSelected(myselect)
 		{  
                 var opt = document.getElementsByTagName("option");  
@@ -153,8 +153,8 @@
 			if(knum==delestu[i].childNodes[0].childNodes[0].nodeValue)
 			{
 				deled_node=x.removeChild(delestu[i]);
-				alert(deled_node.childNodes[1].childNodes[0].nodeValue+"É¾³ıÁË½Úµãsaved");
-				//´«ÈëvbsºóÌ¨Í¨ĞÅ
+				alert(deled_node.childNodes[1].childNodes[0].nodeValue+"åˆ é™¤äº†èŠ‚ç‚¹saved");
+				//ä¼ å…¥vbsåå°é€šä¿¡
 				var url="suredelete.asp?datatag="+document.getElementById("num").value;
 				////alert(url);
 				window.location.href=url;
@@ -166,14 +166,14 @@
 	
 	function delecon()
 	{
-		var mymessage=confirm("µã»÷É¾³ı¼´²»¿É»Ö¸´!È·ÈÏÉ¾³ıÂğ?");
+		var mymessage=confirm("ç‚¹å‡»åˆ é™¤å³ä¸å¯æ¢å¤!ç¡®è®¤åˆ é™¤å—?");
 		if(mymessage==true)
 		{
 			dele();
 		}
 		else
 		{
-			//alert("È¡ÏûÁË²Ù×÷");
+			//alert("å–æ¶ˆäº†æ“ä½œ");
 		}
 	}  
 	
@@ -196,7 +196,7 @@
 				editstu[i].childNodes[6].firstChild.nodeValue=document.getElementById("class").value;
 				
 				
-				alert("Í¬Ñ§:"+editstu[i].childNodes[1].firstChild.nodeValue+"¸üĞÂÁËĞÅÏ¢");
+				alert("åŒå­¦:"+editstu[i].childNodes[1].firstChild.nodeValue+"æ›´æ–°äº†ä¿¡æ¯");
 				
 				var key="num="+editstu[i].childNodes[0].firstChild.nodeValue+"&";
 			
@@ -224,10 +224,10 @@
 
 </head>  
 <body onLoad="loadXMLFile()"> 
-	<div align="center"><font size="+3" color="#0072C6"><strong>ĞŞ¸ÄÑ§Éú»ù±¾ĞÅÏ¢</strong></font></div>
-	<div align="center"><a href="index.html">·µ»Ø</a></div>
+	<div align="center"><font size="+3" color="#0072C6"><strong>ä¿®æ”¹å­¦ç”ŸåŸºæœ¬ä¿¡æ¯</strong></font></div>
+	<div align="center"><a href="index.html">è¿”å›</a></div>
 	<hr color="#f46240" SIZE="1">
-	<div align="center"><strong>ÇëÊäÈëÑ§ºÅ»òĞÕÃû:</strong></div>
+	<div align="center"><strong>è¯·è¾“å…¥å­¦å·æˆ–å§“å:</strong></div>
     <div id="divcontent" align="center">  
         <select id="myselect" onChange="checkSelected(this)">  
         <option value="--"></option>  
@@ -239,22 +239,22 @@
 		<table width="600" border="0" align="center">
 			<tbody>
 				<tr>
-					<td>ĞÕÃû:<input id="name" type="text" style="width:100px"></td>	
-					<td>Ñ§ºÅ:<input id="num" type="text" style="width:100px" disabled="true"></td>
+					<td>å§“å:<input id="name" type="text" style="width:100px"></td>	
+					<td>å­¦å·:<input id="num" type="text" style="width:100px" disabled="true"></td>
 				</tr>
 				<tr>						
-					<td>ĞÔ±ğ:<input id="sex" type="text" style="width:100px"></td>
-					<td>¼®¹á:<input id="orign" type="text" style="width:100px"></td>
+					<td>æ€§åˆ«:<input id="sex" type="text" style="width:100px"></td>
+					<td>ç±è´¯:<input id="orign" type="text" style="width:100px"></td>
 				</tr>
 				<tr>
-					<td>Ñ§Ôº:<input id="acade" type="text" style="width:100px"></td>								
-					<td>×¨Òµ:<input id="major" type="text" style="width:100px"></td>
+					<td>å­¦é™¢:<input id="acade" type="text" style="width:100px"></td>								
+					<td>ä¸“ä¸š:<input id="major" type="text" style="width:100px"></td>
 				</tr>
 				<tr>	
-					<td>°à¼¶:<input id="class" type="text" style="width:100px"></td>
+					<td>ç­çº§:<input id="class" type="text" style="width:100px"></td>
 					<td>
-					<input type="submit" form="form1" value="ĞŞ¸Ä" onClick="edit();">&nbsp;
-					<input type="submit" form="form1" value="É¾³ı" onClick="delecon();"></td>
+					<input type="submit" form="form1" value="ä¿®æ”¹" onClick="edit();">&nbsp;
+					<input type="submit" form="form1" value="åˆ é™¤" onClick="delecon();"></td>
 					
 				</tr>
 			</tbody>	
@@ -262,12 +262,12 @@
 		
 	</form>
 	<hr color="#f46240" SIZE="1">
-	<div align="center"><a href="index.html">·µ»Ø</a></div>
+	<div align="center"><a href="index.html">è¿”å›</a></div>
 	<%
 		if  request.form("num")<>"" then	
 		set url="suredelete.asp?datatag="+request.form("num")
 		
-	    Response.write("<a href="+url+" target='_self'>É¾³ı</a>")
+	    Response.write("<a href="+url+" target='_self'>åˆ é™¤</a>")
 		end if
 	%>
 	

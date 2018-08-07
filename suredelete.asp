@@ -1,30 +1,30 @@
-<!--Ê¹ÓÃVBScriptÓïÑÔ±àĞ´½Å±¾-->
+<!--ä½¿ç”¨VBScriptè¯­è¨€ç¼–å†™è„šæœ¬-->
 <%@ language=VBScript %>
 <%
-  'Ê×ÏÈÖĞrequest¶ÔÏóÖĞ»ñµÃÓÃÓÚÈ·¶¨ÁôÑÔµÄÈÕÆÚÖµ
+  'é¦–å…ˆä¸­requestå¯¹è±¡ä¸­è·å¾—ç”¨äºç¡®å®šç•™è¨€çš„æ—¥æœŸå€¼
    str=Request.QueryString("datatag")
    'stop
-   '´´½¨ÓÃÓÚ·ÃÎÊXMLÎÄµµµÄDOM¶ÔÏó
+   'åˆ›å»ºç”¨äºè®¿é—®XMLæ–‡æ¡£çš„DOMå¯¹è±¡
    set xmldoc=Server.createObject("Microsoft.XMLDOM")
-   'Ê¹ÓÃload·½·¨½«XMLÎÄµµ×°ÈëDOM¶ÔÏó
+   'ä½¿ç”¨loadæ–¹æ³•å°†XMLæ–‡æ¡£è£…å…¥DOMå¯¹è±¡
 
    xmldoc.load(Server.MapPath("studentschema.xml"))
-   'ÉèÖÃ²éÑ¯ÁôÑÔÊ¹ÓÃµÄ×Ö·û´®£¬×Ö·û´®µÄĞÎÊ½Èç£º//ÁôÑÔ[ÈÕÆÚ="01-11-10//2:48:22"]
-   'Æä×÷ÓÃÊÇ»ñµÃÓĞ¡°ÈÕÆÚ¡±×ÓÔªËØ£¬
-   '²¢ÇÒ¡°ÈÕÆÚ¡±×ÓÔªËØÄÚÈİÎª01-11-10//2:48:22µÄ¡°ÁôÑÔ¡±ÔªËØ
+   'è®¾ç½®æŸ¥è¯¢ç•™è¨€ä½¿ç”¨çš„å­—ç¬¦ä¸²ï¼Œå­—ç¬¦ä¸²çš„å½¢å¼å¦‚ï¼š//ç•™è¨€[æ—¥æœŸ="01-11-10//2:48:22"]
+   'å…¶ä½œç”¨æ˜¯è·å¾—æœ‰â€œæ—¥æœŸâ€å­å…ƒç´ ï¼Œ
+   'å¹¶ä¸”â€œæ—¥æœŸâ€å­å…ƒç´ å†…å®¹ä¸º01-11-10//2:48:22çš„â€œç•™è¨€â€å…ƒç´ 
    str2="//student[id='"+str+"']"
-   'Ê¹ÓÃselectSingleNode·½·¨»ñµÃÂú×ãÌõ¼şµÄ¡°ÁôÑÔ¡±ÔªËØ½Úµã
+   'ä½¿ç”¨selectSingleNodeæ–¹æ³•è·å¾—æ»¡è¶³æ¡ä»¶çš„â€œç•™è¨€â€å…ƒç´ èŠ‚ç‚¹
    set node=xmldoc.selectSingleNode(str2)
-   'Ê¹ÓÃremoveChild·½·¨É¾³ıÔªËØ
+   'ä½¿ç”¨removeChildæ–¹æ³•åˆ é™¤å…ƒç´ 
    xmldoc.documentElement.removeChild(node)
-   'Ê¹ÓÃsave·½·¨±£´æĞŞ¸ÄºóµÄXMLÎÄµµ
-   '±ØĞë±£´æ£¬·ñÔòÉ¾³ı²Ù×÷²»»áÉúĞ§
+   'ä½¿ç”¨saveæ–¹æ³•ä¿å­˜ä¿®æ”¹åçš„XMLæ–‡æ¡£
+   'å¿…é¡»ä¿å­˜ï¼Œå¦åˆ™åˆ é™¤æ“ä½œä¸ä¼šç”Ÿæ•ˆ
    xmldoc.save(Server.MapPath("studentschema.xml"))
-   '·µ»ØÈ·ÈÏĞÅÏ¢ºÍÏà¹ØÁ´½Ó
+   'è¿”å›ç¡®è®¤ä¿¡æ¯å’Œç›¸å…³é“¾æ¥
    Response.write("<center>")
-   Response.write("ÒÑ¾­³É¹¦É¾³ıÁôÑÔ")
+   Response.write("å·²ç»æˆåŠŸåˆ é™¤ç•™è¨€")
    Response.write("<br><br>")
-   Response.write("<a href='modi.asp'>·µ»Ø</a>")
+   Response.write("<a href='modi.asp'>è¿”å›</a>")
    Response.write("</center>")
    response.end
 %>
