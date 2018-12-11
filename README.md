@@ -8,7 +8,7 @@ USST研究生《XML技术应用》last homework
 
  
 
-一、课程梗概
+# 一、课程梗概
 
 xml（(ExtensibleMarkup Language）可扩展标记语言，标准通用标记语言的子集，是一种用于标记电子文件使其具有结构性的标记语言。它可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。它非常适合万维网传输，提供统一的方法来描述和交换独立于应用程序或供应商的结构化数据。是Internet环境中跨平台的、依赖于内容的技术，也是当今处理分布式结构信息的有效工具。
 
@@ -16,7 +16,7 @@ xml（(ExtensibleMarkup Language）可扩展标记语言，标准通用标记语
 
  
 
-二、实验环境
+# 二、实验环境
 
 IIS（InternetInformation Services）环境搭建
 
@@ -28,7 +28,7 @@ Notepad++和DreamweaverCC
 
  
 
-三、主要技术与原理
+# 三、主要技术与原理
 
 XML(可扩展标记语言)主要具有以下几个特点： ① 简洁有效 XML是一个精简的SGML，它将SGML的丰富功能与HTML的易用性结合到Web应用种，它保留了SGML的可扩展功能，这使得XML从根本上有区别于HTML。并且XML种还包括可扩展格式语言XSL（ExtensibleStyle Language）和可扩展链接语言XLL（Extensible Linking Language）使得XML的显示和解析更加方便快捷。② 易学易用 XML对SGML进行了精简，它抛弃了SGML中不常用的部分，方便用户编写Web页面同时也给设计人员实现XML浏览器降低了困难。 ③ 开放的国际化标准 XML是W3C正式批准的，它完全可用于Web和工具的开发。XML具有标准的名域说明方法，支持文档对象模型标准、可扩展类型语言标准、可扩展链接语言标准和XML指针语言标准。使用XML可以在不同的计算机系统间交换信息，而且还可以跨越国界和超越不同文化疆界交换信息。 ④ 高效可扩充 XML支持复用文档片断，使用者可以发明和使用自己的标签，也可以与他人共享，可延伸性大。在XML中，可定义一组无限量的标准，可以有效地进行XML文件的扩充。
 
@@ -40,7 +40,7 @@ IIS（InternetInformation Server，互联网信息服务）是一个World Wide W
 
  
 
-四、设计框架
+# 四、设计框架
 
 根据提供的设计样式和需要实现设计功能，列写出整个框架需要的页面，并写出每个页面并具体到其所实现的功能
 
@@ -81,13 +81,13 @@ suredelete.asp负责接收url请求并通过request.querystring()方法获取由
 
 各网页链接的层次结构
 
-图片
+[图片](https://a2.qpic.cn/psb?/V12bBZlI1u3Rk3/1TWsizfFUFTl6GjPK4kV5LRnf.0H3PpuL8HMzhpnFW8!/b/dD0BAAAAAAAA&ek=1&kp=1&pt=0&bo=UgLzAAAAAAABEJQ!&tl=1&su=0222803585&tm=1544500800&sce=0-12-12&rf=2-9)
 
  
 
 studentschema.xml文档元素层次结构如图：
 
-图片
+[图片]()
 
 根据上图可知一个student元素由子节点id（学号），name（姓名），sex（姓名），orig（家乡），acade（学院），major（专业）和class（班级）组成，较为符合xml数据检索设计的需要。文档实例如下图所示：
 
@@ -95,7 +95,7 @@ studentschema.xml文档元素层次结构如图：
 
  
 
-五、实现与展示
+# 五、实现与展示
 
 根据设计要求将上述设计框架应用于实现学生信息管理系统的网页。
 
@@ -177,7 +177,7 @@ Function URLDecode(strURL)
 
  
 
-六、心得与展望（不存在的）
+# 六、心得与展望
 
 经过三个多月的简单学习和上课听讲，初步掌握了维护*.xml的一些简单的知识和基本常识，也能从老师讲的基本知识中简单的应用一下上课所学到的知识，感觉xml文本有如下优缺点：
 
